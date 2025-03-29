@@ -1,6 +1,6 @@
 import React from "react";
 import { saveAs } from "file-saver";
-import Sathish_resume from "../assets/sathish_resume.pdf";
+import Sathish_resume from "/Sathish_resume.pdf";
 import { HashLink as Link } from "react-router-hash-link";
 import { motion } from "framer-motion";
 import { FaReact, FaNodeJs } from "react-icons/fa";
