@@ -30,26 +30,34 @@ const MainPage = () => {
     {
       title: "Chat App",
       description: "Chating aplication with real-time updates using Socket.io and React with admin controles. ",
-      tags: ["React", "Express", "Socket.io", "Tailwind","MongoDB"],
-      githubLink: "https://github.com/yourusername/task-manager",
+      tags: ["React", "Express", "Socket.io", "Tailwind","MongoDB","Nodejs"],
+      githubLink: "https://github.com/sathish-RG/react-node-chat-app-main",
       liveLink: "https://spectacular-horse-0f5464.netlify.app/auth",
       image: "/ChatApp.png"
     },
     {
       title: "E-Commerce Platform",
       description: "Full-featured online store with cart, checkout, and admin dashboard built with MERN stack.",
-      tags: ["React", "Node.js", "MongoDB", "Redux"],
-      githubLink: "https://github.com/yourusername/ecommerce",
-      liveLink: "https://yourapp.com",
-      image: "/ChatApp-screenshot.jpg"
+      tags: ["React",  "Redux", "Tailvind CSS"],
+      githubLink: "https://github.com/sathish-RG/Ecommerce",
+      liveLink: "https://jade-choux-ab2228.netlify.app/",
+      image: "/ecommerce.png"
     },
     {
       title: "Portfolio Website",
       description: "Personal portfolio site showcasing projects and skills with responsive design.",
       tags: ["React", "Tailwind CSS", "Framer Motion"],
-      githubLink: "https://github.com/yourusername/portfolio",
-      liveLink: "https://yourportfolio.com",
-      image: "/portfolio-screenshot.jpg"
+      githubLink: "https://github.com/sathish-RG/client_portfolio",
+      liveLink: "https://sathishrg.netlify.app/",
+      image: "/portfolio.png"
+    },
+    {
+      title: "Landing Page",
+      description: "Mobile-first approach and optimized for all devices, showcasing clean UI/UX principles with vibrant travel imagery.",
+      tags: ["HTML5", "CSS", "Flexbox","Grid"],
+      githubLink: "https://github.com/sathish-RG/TASK-1-CSS-LANDING-PAGE/tree/main",
+      liveLink: "https://reliable-profiterole-90d799.netlify.app/",
+      image: "/landingPage.png"
     }
   ];
   return (
