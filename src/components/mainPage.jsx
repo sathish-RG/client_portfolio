@@ -44,6 +44,14 @@ const MainPage = () => {
       image: "/ecommerce.png"
     },
     {
+      title: "Expense Traker",
+      description: "Expense traker it is used to track expense and income created using javascript",
+      tags: ["HTML5", "CSS", "JavaScript"],
+      githubLink: "https://github.com/sathish-RG/TASK-4-JS-TO-DO-LIST",
+      liveLink: "https://expance-tracker-mine.netlify.app/",
+      image: "/expenceTraker.png"
+    },
+    {
       title: "Portfolio Website",
       description: "Personal portfolio site showcasing projects and skills with responsive design.",
       tags: ["React", "Tailwind CSS", "Framer Motion"],
