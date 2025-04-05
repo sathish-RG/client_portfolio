@@ -8,11 +8,13 @@ import { SiMongodb, SiExpress, SiTailwindcss, SiRedux } from "react-icons/si";
 import { DiJavascript1 } from "react-icons/di";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 
 const MainPage = () => {
   const handleDownload = () => {
     saveAs(Sathish_resume, "sathish_resume.pdf");
+    toast.success("Resume Downloaded Successfully!")
   };
   const skills = [
     { name: "React", icon: <FaReact className="w-full h-full" />, level: 90 },
@@ -68,6 +70,7 @@ const MainPage = () => {
       image: "/landingPage.png"
     }
   ];
+  
   return (
     <div>
       {/* Home page content goes here */}
