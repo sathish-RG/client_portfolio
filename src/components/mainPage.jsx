@@ -39,7 +39,7 @@ const MainPage = () => {
     },
     {
       title: "E-Commerce Platform",
-      description: "Full-featured online store with cart, checkout, and admin dashboard built with MERN stack.",
+      description: "A full-stack eCommerce platform built with React, Node.js, Express, and MongoDB Features user authentication, product browsing by category, cart management, admin dashboard, and secure checkout.",
       tags: ["React",  "Redux", "Tailwind CSS", "Expressjs","Mongodb","Nodejs"],
       githubLink: "https://github.com/sathish-RG/Ecommerce-Full-Stack",
       liveLink: "https://ecommercev.netlify.app/",
