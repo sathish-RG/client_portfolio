@@ -40,10 +40,10 @@ const MainPage = () => {
     {
       title: "E-Commerce Platform",
       description: "Full-featured online store with cart, checkout, and admin dashboard built with MERN stack.",
-      tags: ["React",  "Redux", "Tailwind CSS"],
-      githubLink: "https://github.com/sathish-RG/Ecommerce",
-      liveLink: "https://jade-choux-ab2228.netlify.app/",
-      image: "/ecommerce.png"
+      tags: ["React",  "Redux", "Tailwind CSS", "Expressjs","Mongodb","Nodejs"],
+      githubLink: "https://github.com/sathish-RG/Ecommerce-Full-Stack",
+      liveLink: "https://ecommercev.netlify.app/",
+      image: "/fullecommerce.png"
     },
     {
       title: "Expense Traker",
