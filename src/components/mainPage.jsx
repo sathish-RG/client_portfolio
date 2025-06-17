@@ -46,6 +46,14 @@ const MainPage = () => {
       image: "/fullecommerce.png"
     },
     {
+      title: "E Learning Platform",
+      description: "A full-stack E Learning platform. Features user authentication using clerk, product browsing by category, learning traking management, and secure enrollment, stripe payment gateway.",
+      tags: ["React",  "Redux", "Tailwind CSS", "Expressjs","Mongodb","Nodejs","Clerk"],
+      githubLink: "https://github.com/sathish-RG/client1",
+      liveLink: "https://client1-puce-gamma.vercel.app/",
+      image: "/elearning.png"
+    },
+    {
       title: "Expense Traker",
       description: "Expense traker it is used to track expense and income created using javascript",
       tags: ["HTML5", "CSS", "JavaScript"],
