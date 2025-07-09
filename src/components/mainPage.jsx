@@ -69,14 +69,7 @@ const MainPage = () => {
       liveLink: "https://sathishrg.netlify.app/",
       image: "/portfolio.png"
     },
-    {
-      title: "Landing Page",
-      description: "Mobile-first approach and optimized for all devices, showcasing clean UI/UX principles with vibrant travel imagery.",
-      tags: ["HTML5", "CSS", "Flexbox","Grid"],
-      githubLink: "https://github.com/sathish-RG/TASK-1-CSS-LANDING-PAGE/tree/main",
-      liveLink: "https://reliable-profiterole-90d799.netlify.app/",
-      image: "/landingPage.png"
-    }
+    
   ];
   
   return (
@@ -321,82 +314,102 @@ const MainPage = () => {
           </div>
         </div>
       </section>
-      {/*Projects page content gose here */}
-      <section id="projects" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-800 mb-4">
-              My <span className="text-blue-600">Projects</span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Here are some of my recent works that demonstrate my skills and expertise.
-            </p>
-          </motion.div>
+     {/*Projects page content gose here */}
+<section id="projects" className="py-20 bg-white">
+  <div className="container mx-auto px-4">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true }}
+      className="text-center mb-16"
+    >
+      <h2 className="text-4xl font-bold text-gray-800 mb-4">
+        My <span className="text-blue-600">Projects</span>
+      </h2>
+      <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+        Here are some of my recent works that demonstrate my skills and expertise.
+      </p>
+    </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                <div className="h-48 overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
-                  <p className="text-gray-600 mb-4">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag, i) => (
-                      <span 
-                        key={i}
-                        className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="flex space-x-4">
-                    <a 
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
-                    >
-                      <FaGithub className="mr-2" />
-                      Code
-                    </a>
-                    <a 
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-gray-700 hover:text-blue-600 transition-colors"
-                    >
-                      <FaExternalLinkAlt className="mr-2" />
-                      Live Demo
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {projects.map((project, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          viewport={{ once: true }}
+          className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 flex flex-col"
+        >
+          <div className="h-48 overflow-hidden">
+            <img 
+              src={project.image} 
+              alt={project.title}
+              className="w-full h-full object-cover"
+            />
           </div>
-        </div>
-      </section>
+          <div className="p-6 flex-grow">
+            <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
+            <p className="text-gray-600 mb-4">{project.description}</p>
+            
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.tags.map((tag, i) => (
+                <span 
+                  key={i}
+                  className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="p-6 pt-0">
+            <div className="flex flex-col space-y-3">
+              {/* Frontend Code Button */}
+              {project.tags.includes("React") || project.tags.includes("HTML5") || project.tags.includes("JavaScript") ? (
+                <a 
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                >
+                  <FaGithub className="mr-2" />
+                  Frontend Code
+                </a>
+              ) : null}
+
+              {/* Backend Code Button - Only show if project has backend technologies */}
+              {project.tags.includes("Nodejs") || project.tags.includes("Expressjs") || project.tags.includes("MongoDB") ? (
+                <a 
+                  href={project.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-colors"
+                >
+                  <FaGithub className="mr-2" />
+                  Backend Code
+                </a>
+              ) : null}
+
+              {/* Live Demo Button */}
+              <a 
+                href={project.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
+              >
+                <FaExternalLinkAlt className="mr-2" />
+                Live Demo
+              </a>
+            </div>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
       {/*Contacts page content gose here */}
       <section id="contact" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -424,10 +437,7 @@ const MainPage = () => {
                 <FaEnvelope className="text-blue-600 text-xl mr-4" />
                 <p className="text-gray-700">rsathishece@hotmail.com</p>
               </div>
-              <div className="flex items-center">
-                <FaPhone className="text-blue-600 text-xl mr-4" />
-                <p className="text-gray-700">+91 9345835698</p>
-              </div>
+              
             </div>
 
             <form className="space-y-6">
