@@ -54,6 +54,14 @@ const MainPage = () => {
       image: "/elearning.png"
     },
     {
+      title: "Task Manager",
+      description: "A full-stack task manager website. Features user authentication, task create updating, delete option and strikout options available, and secure authentication, mongodb atlas stored datas.",
+      tags: ["React",  "Redux", "Tailwind CSS", "Expressjs","Mongodb","Nodejs"],
+      githubLinkbe: "https://github.com/sathish-RG/client-todo",
+      liveLink: "https://totofull.netlify.app/",
+      image: "/todo.png"
+    },
+    {
       title: "Expense Traker",
       description: "Expense traker it is used to track expense and income created using javascript",
       tags: ["HTML5", "CSS", "JavaScript"],
